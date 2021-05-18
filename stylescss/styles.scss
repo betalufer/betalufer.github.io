@@ -1,0 +1,515 @@
+@import "variable";
+* {
+  margin: 0px;
+  padding: 0;
+}
+body {
+  max-width: 1440px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  height: 80px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.logo {
+  width: 36px;
+  height: 36px;
+  margin-left: 50px;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+nav {
+  display: block;
+}
+.menu-principal {
+  display: flex;
+  list-style: none;
+  margin-right: 100px;
+}
+.menu a {
+  @include texto($mono, $sizeletrap1pc, 28px, $colorletras1);
+  text-decoration: none;
+  cursor: pointer;
+  width: 87px;
+  padding: 26px 48px;
+}
+.menu a:hover {
+  text-decoration: line-through;
+  color: #00f3bb;
+}
+.menu a:active {
+  text-decoration: line-through;
+  color: rgba(6, 10, 36, 0.56);
+}
+.hamburguesa {
+  display: none;
+}
+.checkbox-hambur {
+  display: none;
+}
+.equis {
+  display: none;
+}
+.SectionHello {
+  width: $maxancho;
+  height: 369px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 200px;
+  margin-top: 70px;
+}
+h1 {
+  @include texto($sans, $sizeletrah1pc, $maxaltohello, $colorletras1);
+  font-weight: 400;
+  width: 750px;
+  margin-bottom: 0px;
+}
+.tacha {
+  text-decoration: line-through;
+  height: $maxaltohello;
+  width: 179px;
+}
+.punto {
+  color: $colorpunto;
+  font-size: $sizeletrah1pc;
+  height: $maxaltohello;
+  width: 18px;
+  font-weight: 400;
+}
+.primer-parrafo {
+  @include texto($mono, $sizeletrap1pc, 48px, $colorletras1);
+  width: 628px;
+  margin-top: 0px;
+  margin-bottom: 28px;
+}
+.button {
+  @include botones(226px, 56px, $sizeletrabotpc);
+  margin-top: 50px;
+
+}
+.button:hover {
+  color: $colorletras2;
+  background-image: linear-gradient(225deg, #0000fe 0%, #00f0b8 100%);
+}
+.SectionEpisodios {
+  height: 1042px;
+  max-width: 1440px;
+  clip-path: polygon(0 14%, 100% 0, 100% 85%, 0 100%);
+  background-image: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
+}
+h2 {
+  @include texto($sans, $sizeletra2pc, 62px, $colorletras2);
+  font-weight: 400;
+  width: 209px;
+  padding-left: $padizq;
+  padding-top: 186px;
+  margin-bottom: 26px;
+  padding-right: 1031px;
+}
+.Capitulos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+}
+.link {
+  @extend %iframes;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border:0;
+  background:rgba(0,0,0,0);
+  /* border-style: none; es lo mismo que frameborder?*/
+}
+
+.SectionSomos {
+  display: flex;
+}
+.div-somos {
+  position: relative;
+  right: -262.4px;
+}
+#venimos {
+  @include texto($sans, $sizeletra2pc, 62px, $colorletras1);
+  width: 399px;
+  font-weight: 400;
+  margin-top: 20.4px;
+  margin-bottom: 24px;
+}
+.Segundo-parrafo {
+  @include texto($mono, $sizeletrap1pc, 204px, $colorletras1);
+  width: 464px;
+  line-height: 24px;
+  text-align: left;
+}
+.phone-desplazado {
+  height: 660px;
+  width: 457.6px;
+  position: relative;
+  bottom: 168.6px;
+  right: -200px;
+}
+.SectionInvitadas {
+  margin-top: -130px;
+}
+.h5-invitadas {
+  @include texto($sans, $sizeletra2pc, 62px, $colorletras1);
+  width: 481px;
+  font-weight: 400;
+  margin-left: 200px;
+  margin-bottom: 36px;
+}
+.div-chicas {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+.chicas {
+  @extend %chicas;
+}
+.div-iconos {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+.iconos {
+  font-family: $sans;
+  font-weight: 600;
+  font-size: $sizeletra3;
+  color: $colorletras1;
+  letter-spacing: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 2%;
+}
+.iconos img {
+  justify-content: center;
+}
+.iconos p {
+  text-align: center;
+  width: 220px;
+  margin-top: 29px;
+}
+.p2 {
+  height: 64px;
+}
+.size-iconos {
+  width: 104px;
+  height: 104px;
+  display: block;
+  margin: auto;
+}
+.h5-temas {
+  @include texto($sans, $sizeletra2pc, 62px, $colorletras1);
+  width: 586px;
+  font-weight: 400;
+  margin-left: 200px;
+  margin-top: 64px;
+  margin-bottom: 69px;
+}
+.SectionNovedades {
+  max-width: 1440px;
+  height: 518px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  clip-path: polygon(0 19%, 100% 0, 100% 100%, 0 100%);
+  background-image: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
+}
+
+.h5-novedades {
+  @include texto($sans, $sizeletra2pc, 62px, $colorletras2);
+  width: 692px;
+  font-weight: 400;
+  text-align: center;
+  padding-left: 374px;
+  padding-right: 374px;
+  margin-bottom: 36px;
+}
+.button2 {
+  @include botones(345px, 56px, $sizeletrabotpc);
+  margin-left: 547px;
+  margin-right: 548px;
+}
+.button2:hover {
+  background-image: linear-gradient(225deg, #0000fe 0%, #00f0b8 100%);
+  color: $colorletras2;
+}
+.SectionFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  height: 100px;
+}
+.p-footer {
+  @include texto($mono, $sizeletrap1pc, 28px, $colorletras1);
+  line-height: 28px;
+  width: 269px;
+  margin-left: 100px;
+}
+.redes {
+  list-style: none;
+  display: flex;
+  width: 248px;
+  height: auto;
+  margin-right: 64px;
+  justify-content: space-around;
+}
+.fab {
+  font-size: 18px;
+  color: $colorletras1;
+  letter-spacing: 0;
+  line-height: 28px;
+}
+/* aqui comienza la parte mobile */
+
+@media screen and (max-width: 767px) {
+  body {
+    max-width: 767px;
+  }
+  .header {
+    height: 44px;
+    width: 100%;
+  }
+
+  .logo {
+    margin-top: 25%;
+    margin-left: 10%;
+    margin-bottom: 25%;
+    width: 24px;
+    height: 24px;
+  }
+  .hamburguesa {
+    display: block;
+    cursor: pointer;
+    justify-content: flex-end;
+    margin-left: 40%;
+  }
+
+  .menu-principal {
+    background-color: #0000ec;
+    top: 60px;
+    width: 100%;
+    height: 224px;
+    position: fixed;
+    z-index: 4;
+    left: 0;
+  }
+  .menu {
+    margin: 1%;
+  }
+  .menu a {
+    color: $colorletras2;
+  }
+
+  .checkbox-hambur ~ .menu-nav ul {
+    display: none;
+  }
+  .checkbox-hambur:checked ~ .menu-nav ul {
+    display: inline;
+  }
+  .checkbox-hambur:checked ~ .equis {
+    display: block;
+    cursor: pointer;
+    justify-content: flex-end;
+    margin-left: 40%;
+  }
+  .checkbox-hambur:checked ~ .hamburguesa {
+    display: none;
+  }
+  /* fin menu hamburguesa y navegador*/
+
+  /* empieza section 2 */
+  .SectionHello {
+    width: 100%;
+    height: auto;
+    padding-left: 7%;
+    margin-top: 29px;
+  }
+  .hello {
+    display: block;
+    width: 100%;
+    height: 42px;
+    margin-left: 3%;
+    margin-right: 2%;
+  }
+  h1 {
+    @include texto($sans, $sizeletrah1mv, 42px, $colorletras1);
+    width: 80%;
+    line-height: 42px;
+    text-align: left;
+  }
+  .tacha {
+    height: 42px;
+    width: 101px;
+    letter-spacing: 0;
+    line-height: 42px;
+  }
+  .punto {
+    color: $colorletras1;
+    font-size: $sizeletra2mv;
+    height: 42px;
+    width: 10px;
+    letter-spacing: 0;
+    line-height: 42px;
+  }
+  .primer-parrafo {
+    @include texto($mono, $sizeletrap1mv, 66px, $colorletras1);
+    width: 70%;
+    margin-top: 60px;
+    margin-bottom: 36px;
+    line-height: 22px;
+    margin-left: 3%;
+    margin-right: 5%;
+    text-align: left;
+  }
+  .button {
+    @include botones(280px, 48px, $sizeletrabotmv);
+    margin-top: 10%;
+    margin-left: 3%;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 22px;
+  }
+  /* empieza section 3 */
+  .SectionEpisodios {
+    margin-top: 10%;
+    height: 1400px;
+    width: 100%;
+    clip-path: polygon(0 4%, 100% 0, 100% 95%, 0% 100%);
+  }
+
+  h2 {
+    @include texto($sans, $sizeletra2mv, 42px, $colorletras2);
+    font-weight: 400;
+    width: 157px;
+    padding-left: 10%;
+    padding-top: 13%;
+  }
+
+  .link {
+    width: 80%;
+    height: 300px;
+    margin-top: -4%;
+    margin-bottom: -4%;
+  }
+  /* empieza section 4 */
+  .SectionSomos {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .phone-desplazado {
+    height: 519px;
+    width: 100%;
+    right: auto;
+    left: auto;
+  }
+
+  .div-somos {
+    width: 80%;
+    height: 350px;
+    right: auto;
+    left: auto;
+    margin-left: 10%;
+    bottom: 170px;
+  }
+  #venimos {
+    @include texto($sans, $sizeletra2mv, 84px, $colorletras1);
+    width: 80%;
+    margin-bottom: 24px;
+    line-height: 42px;
+  }
+  .Segundo-parrafo {
+    @include texto($mono, $sizeletrap1mv, 254px, $colorletras1);
+    width: 100%;
+    line-height: 22px;
+    text-align: justify;
+  }
+
+  /* empieza section invitadas */
+  .h5-invitadas {
+    @include texto($sans, $sizeletrah1mv, 84px, $colorletras1);
+    width: 80%;
+    line-height: 42px;
+    margin-left: 10%;
+    margin-bottom: 0px;
+    margin-top: 15%;
+  }
+  .chicas {
+    height: $altochicas;
+    width: 100%;
+  }
+  /* empieza section Temas */
+  .h5-temas {
+    @include texto($sans, $sizeletrah1mv, 84px, $colorletras1);
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 64px;
+    margin-bottom: 69px;
+    line-height: 42px;
+  }
+  .div-iconos {
+    flex-direction: column;
+    height: max-content;
+  }
+  .iconos {
+    margin: 5%;
+  }
+  .iconos p {
+    width: 100%;
+    margin-top: 29px;
+  }
+  /* empieza section novedades  */
+  .SectionNovedades {
+    width: 100%;
+    height: 341px;
+  }
+  .h5-novedades {
+    @include texto($sans, $sizeletrah1mv, 126px, $colorletras2);
+    width: 70%;
+    line-height: 42px;
+    padding-left: 15%;
+    padding-right: 10%;
+    margin-bottom: 0;
+    margin-top: 10%;
+  }
+  .button2 {
+    @include botones(280px, 48px, $sizeletrabotmv);
+    margin-top: 10%;
+    margin-left: 10%;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 22px;
+  }
+  /* empieza  footer */
+  .SectionFooter {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+  .p-footer {
+    @include texto($mono, $sizeletrap1mv, 22px, $colorletras1);
+    line-height: 22px;
+    width: 80%;
+    margin-left: 10%;
+  }
+  .fab {
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 28px;
+  }
+  .redes {
+    margin-left: 10%;
+  }
+}

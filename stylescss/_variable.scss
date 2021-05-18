@@ -1,0 +1,53 @@
+$colorletras1: #060a24;
+$colorletras2: #ffffff;
+$colorboton: #00f3bb;
+$colorpunto: #0000ec;
+/* empieza letra pc */
+$sizeletrah1pc: 64px;
+$sizeletra2pc: 48px;
+$sizeletra3: 24px;
+$sizeletrabotpc: 18px;
+$sizeletrap1pc: 16px;
+/* empieza letras de celular */
+$sizeletrah1mv: 36px;
+$sizeletra2mv: 36px;
+$sizeletrabotmv: 16px;
+$sizeletrap1mv: 14px;
+
+$maxancho: 1440px;
+$maxaltohello: 84px;
+$sans: "IBM Plex Sans", sans-serif;
+$mono: "IBM Plex Mono", monospace;
+$mono-medio: "IBM Plex Mono", "IBM Plex Mono-Medium", monospace;
+$sans-semibold: "IBM Plex Sans", "IBM Plex Sans-SemiBold" sans-serif;
+$anchoiframes: 584px;
+$altoiframes: 232px;
+$padizq: 200px;
+$altochicas: auto; /* 364px; */
+$anchochicas: 448px;
+%iframes {
+  width: $anchoiframes;
+  height: $altoiframes;
+}
+%chicas {
+  width: $anchochicas;
+  height: $altochicas;
+}
+
+@mixin texto($fonfamily, $fontsize, $alto, $colorletras) {
+  font-family: $fonfamily;
+  font-size: $fontsize;
+  height: $alto;
+  color: $colorletras;
+  letter-spacing: 0;
+}
+@mixin botones($ancho, $alto, $fontsize) {
+  width: $ancho;
+  height: $alto;
+  font-size: $fontsize;
+  font-family: $mono-medio;
+  font-weight: 500;
+  background-color: $colorboton;
+  cursor: pointer;
+  color: $colorletras1;
+}
